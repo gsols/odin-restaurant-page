@@ -40,5 +40,5 @@ aboutBtn.addEventListener("click", () => {
 });
 
 
-aboutBtn.click();
+homeBtn.click();
 export {switchPage};
