@@ -2,41 +2,43 @@ import "./styles.css";
 import renderHome from "./home";
 import renderMenu from "./menu";
 import renderAbout from "./about";
-import renderBook from "./book";
+
 
 const navBtns = document.querySelectorAll(".nav-btn");
+const content = document.querySelector("#content");
 
 function refresh() {
-    const content = document.querySelector("#content");
     content.innerHTML = "";
-
     navBtns.forEach((btn) => {
         btn.classList.remove("selected");
     });
+    content.className = ""; 
+}
+
+function switchPage(pageName, renderFn) {
+    refresh();
+    content.classList.add(`page-${pageName}`);
+    renderFn();
 }
 
 const homeBtn = document.querySelector("#home");
 homeBtn.addEventListener("click", () => {
-    refresh();
+    switchPage("home", renderHome);
     homeBtn.classList.add("selected");
-    renderHome();
 });
 
 const menuBtn = document.querySelector("#menu");
 menuBtn.addEventListener("click", () => {
-    refresh();
+    switchPage("menu", renderMenu);
     menuBtn.classList.add("selected");
-    renderMenu();
 });
 
 const aboutBtn = document.querySelector("#about");
 aboutBtn.addEventListener("click", () => {
-    refresh();
+    switchPage("about", renderAbout);
     aboutBtn.classList.add("selected");
-    renderAbout();
 });
 
 
-homeBtn.click();
-
-export {refresh};
+switchPage("home", renderHome);
+export {switchPage};

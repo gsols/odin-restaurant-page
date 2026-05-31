@@ -1,6 +1,6 @@
 import image from "../public/images/1.png";
 import renderBook from "./book";
-import { refresh } from "./index";
+import { switchPage } from "./index";
 
 function renderHome() {
     const content = document.getElementById("content");
@@ -34,8 +34,7 @@ function renderHome() {
     right.appendChild(image1);
 
     bookButton.addEventListener("click", () => {
-        refresh();
-        renderBook();
+        switchPage("book", renderBook);
     });
 
 }
