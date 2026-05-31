@@ -39,4 +39,4 @@ aboutBtn.addEventListener("click", () => {
 
 homeBtn.click();
 
-export { refresh};
+export {refresh};
