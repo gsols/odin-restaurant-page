@@ -1,6 +1,103 @@
+*, *::before, *::after {
+  box-sizing: border-box; /* Includes padding and borders within the element's total width and height */
+  margin: 0;              /* Removes default outer margins on body, headings, and paragraphs */
+  padding: 0;             /* Removes default inner padding on lists and containers */
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #333;
+    background-color: #1B2023;
+    color: #fff;
+}
+
+
+header {
+    padding: 36px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    margin: 0 250px;
+}
+
+
+header button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    margin: 0 15px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.home-greeting{
+    font-size: 48px;
+    font-weight: bold;
+    text-align: left;
+    color: #dd9339;
+    white-space: pre-line;
+}
+
+.home-left {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 30px;
+    height: 100%;
+    width: 600px;
+}
+
+.home-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-page-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-right: -100px;
+}
+
+.home-left button {
+    background-color: transparent;
+    border: 1px solid #94734b;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    margin-top: 45px;
+    width: 300px;
+}
+
+.home-left button:hover {
+    border: 1px solid #94734b;
+    background-color: #44413e;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    margin-top: 45px;
+    width: 300px;
+}
+
+
+#content {
+    height: calc(100vh - 110px);
+    margin: 0 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
