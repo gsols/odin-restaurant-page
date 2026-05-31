@@ -109,7 +109,7 @@ header button {
     gap: 50px;
 }
 
-.nav-highlight {
+ .selected {
     color: #dd9339;
     border-bottom: 2px solid #dd9339;
 }

@@ -1,9 +1,42 @@
 import "./styles.css";
-import image from "../public/images/1.png";
+import renderHome from "./home";
+import renderMenu from "./menu";
+import renderAbout from "./about";
+import renderBook from "./book";
 
-const right = document.querySelector(".home-right");
-const image1 = document.createElement("img");
-image1.src = image;
-image1.alt = "home page image";
-image1.classList.add("home-page-image");
-right.appendChild(image1);
+const navBtns = document.querySelectorAll(".nav-btn");
+
+function refresh() {
+    const content = document.querySelector("#content");
+    content.innerHTML = "";
+
+    navBtns.forEach((btn) => {
+        btn.classList.remove("selected");
+    });
+}
+
+const homeBtn = document.querySelector("#home");
+homeBtn.addEventListener("click", () => {
+    refresh();
+    homeBtn.classList.add("selected");
+    renderHome();
+});
+
+const menuBtn = document.querySelector("#menu");
+menuBtn.addEventListener("click", () => {
+    refresh();
+    menuBtn.classList.add("selected");
+    renderMenu();
+});
+
+const aboutBtn = document.querySelector("#about");
+aboutBtn.addEventListener("click", () => {
+    refresh();
+    aboutBtn.classList.add("selected");
+    renderAbout();
+});
+
+
+homeBtn.click();
+
+export { refresh};
