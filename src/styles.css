@@ -13,11 +13,18 @@ body {
     color: #fff;
 }
 
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
 
 header {
     padding: 36px 0;
     display: flex;
     justify-content: space-between;
+    align-content: center;
     align-items: center;
     font-size: 32px;
     margin: 0 250px;
@@ -29,7 +36,7 @@ header button {
     border: none;
     color: #fff;
     margin: 0 15px;
-    font-size: 32px;
+    font-size: 0.75em;
     cursor: pointer;
 }
 
@@ -100,4 +107,9 @@ header button {
     justify-content: center;
     align-items: center;
     gap: 50px;
+}
+
+.nav-highlight {
+    color: #dd9339;
+    border-bottom: 2px solid #dd9339;
 }
